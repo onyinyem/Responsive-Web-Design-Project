@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    background: linear-gradient(#eefff9 0%, #ffccc1 49%, #dcdbff 100%);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: blueviolet;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: #acabda;
+}
+
+
+/**** header ****/
+
+header {
+    position: relative;
+    padding: 0.2rem;
+    border-bottom: 1px solid #000;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo img {
+    scale: 0.15;
+    margin-left: -150px;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle-btn {
+    color: #000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 50px;
+    display: none;
+}
+
+.action-btn {
+    background-color: #000;
+    color: #acabda;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale .2 ease;
+}
+
+.action-btn img {
+    scale: 0.7;
+}
+
+.action-btn:hover {
+    scale: 1.05;
+    color: #fff;
+}
+
+.action-btn:active {
+    scale: 0.95;
+}
+
+
+/**** dropdown menu ****/
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    margin-right: 20px;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+    height: 220px;
+}
+
+.dropdown-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/**** sections ****/
+section {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #eefff9;
+    margin: 0 0 300px 0;
+}
+
+h1 {
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem !important;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+.description {
+    display: block;
+    text-align: left;
+    padding-top: 20px;
+    margin: 10px 200px 80px;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+a.folio {
+    color: #ec917c;
+    font-size: 50px;
+}
+
+a.folio:hover {
+    color: #f5ebe3;
+}
+
+
+
+/**** animate down arrow ****/
+
+.arrows {
+    width: 60px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: 20px;
+  }
+
+  .arrows path {
+    stroke: #acabda;
+    fill: transparent;
+    stroke-width: 1px;
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
+  }
+
+  @keyframes arrow
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+
+  @-webkit-keyframes arrow /*Safari and Chrome*/
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+
+  .arrows path.a1 {
+    animation-delay:-1s;
+    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+  }
+
+  .arrows path.a2 {
+    animation-delay:-0.5s;
+    -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+  }
+
+  .arrows path.a3 {
+    animation-delay:0s;
+    -webkit-animation-delay:0s; /* Safari 和 Chrome */
+  }
+
+
+/**** colours for each section ****/
+
+.page-section-activities {
+    color: #eefff9;
+}
+
+.page-section-portfolio {
+    color: #f5ebe3;
+}
+
+.page-section-history {
+    color: #e7a99b;
+}
+
+.page-section-about {
+    color: #d3b1e6;
+}
+
+.page-section-hero {
+    color: #acabda;
+}
+
+
+/**** responsive design ****/
+@media only screen and (min-width: 1024px){
+    .page-section-about,
+    .page-section-portfolio,
+    .page-section-history,
+    .page-section-hero {
+        margin-bottom: 100vh;
+    }
+    .description {
+        display: block;
+        text-align: left;
+        margin: 25px 50px 75px 100px;
+    }
+}
+@media only screen and (min-width: 577px) and (max-width: 1023px) {
+    main {
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar .links,
+    .navbar .action-btn {
+        display: none;
+    }
+    .navbar .toggle-btn {
+        display: block;
+    }
+    .dropdown-menu {
+        display: block;
+    }
+    header {
+        border-bottom: none;
+    }
+    svg {
+        scale: 0.5;
+        bottom: 0;
+    }
+    .page-section-about,
+    .page-section-portfolio,
+    .page-section-history,
+    .page-section-hero {
+        margin-bottom: 100vh;
+    }
+    .description {
+        display: block;
+        text-align: left;
+        margin: 25px 50px 75px 100px;
+    }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 576px) {
+    main {
+        inline-size: min-content;
+    }
+    .navbar .links,
+    .navbar .action-btn {
+        display: none;
+    }
+    .navbar .toggle-btn {
+        display: block;
+        position: absolute;
+        left: 140%;
+        right: 0;
+    }
+    .dropdown-menu {
+        display: block;
+        position: absolute;
+        left: 4rem;
+        width: 100vw;
+    }
+    header {
+        border-bottom: none;
+    }
+    .arrows {
+        left: 90%;
+    }
+    svg {
+        scale: 0.5;
+        bottom: 0;
+    }
+    .page-section-about,
+    .page-section-portfolio,
+    .page-section-history,
+    .page-section-hero {
+        margin-bottom: 100vh;
+    }
+    .description {
+        display: block;
+        text-align: left;
+        margin: 25px 50px 75px 100px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+    main {
+        inline-size: min-content;
+    }
+    .navbar .links,
+    .navbar .action-btn {
+        display: none;
+    }
+    .navbar .toggle-btn {
+        display: block;
+        position: absolute;
+        left: 150%;
+        right: 0;
+    }
+    .dropdown-menu {
+        display: block;
+        position: absolute;
+        left: 90%;
+    }
+    header {
+        border-bottom: none;
+    }
+    .arrows {
+        scale: 1.5;
+        top: 150;
+        bottom: -250px;
+        left: 60vh;
+    }
+    svg {
+        scale: 0.5;
+        bottom: 0;
+    }
+    .page-section-about,
+    .page-section-portfolio,
+    .page-section-history,
+    .page-section-hero {
+        margin-bottom: 150vh;
+    }
+    .description {
+        display: block;
+        text-align: left;
+        margin: 25px 50px 75px 100px;
+    }
+}
+
+
+/**** Disable smooth scrolling when users have prefers-reduced-motion enabled ****/
+ @media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
