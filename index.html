@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Web Design</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                    <img src="images/personal-logo-white-nobg.png" alt="logo">
+            </div>
+            <ul class="links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#activities">Activities</a></li>
+            </ul>
+            <a href="#"><div class="action-btn" id="about">
+                My CV <img src="images/arrow-white.png"></div></a>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown-menu">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#activities">Activities</a></li>
+        </div>
+    </header>
+
+    <!-- Sections -->
+    <main>
+        <!-- Home -->
+        <section class="page-section-hero" id="hero">
+            <h2>Welcome</h2>
+            <h1>I'm <span id="auto-type"></span></h1>
+            <p>
+                based in Debrecen, Hungary.
+            </p>
+        </section>
+        <!-- Down arrow -->
+        <a href="#about-me">
+            <svg class="arrows" >
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+        </svg>
+        </a>
+
+        <!-- About -->
+        <section class="page-section-about">
+            <h1 id="about-me">About Me</h1>
+            <div class="description" style="color: #b289c8;">
+                <p>I'm a motivated undergraduate studying computer science for my bachelor's degree. I have a strong interest in technology and am excited to learn more about software development, algorithms, and problem-solving. I'm learning a lot about computer science and developing a strong foundation in programming languages through my academics and side projects. <br><br>
+
+                <p>I am currently identifing my areas of passion and skill within Computer Science. Right now, I have an interest in Information Security (Cybersecurity) and am excited for this path of personal development and exploration. I'm looking forward to getting practical experience, working with colleagues, and contributing to worthwhile projects that have a good influence.</p>
+            </div>
+        </section>
+
+        <!-- Academic History -->
+        <section class="page-section-history">
+            <h1 id="history">Academic History</h1>
+            <div class="description" style="color: #ce8c7d; ">
+                <p>2021 - present <br>
+                I am currently studying Computer Science at the University of Debrecen. This is my only degree so far. I have learned the basics of programming languages such as Java, Python, C and C++, JavaScript, HTML and CSS, as well as network architectures, logic in computer science, software engineering and development, applied mathematics and statistics among other subjects. I have also done some external certifications from Certiport and Cisco, in Java, Python, Cybersecurity and counting. <br><br />
+                </p>
+                <p>2020 - 2021 <br>
+                I did a year of Advanced Subsidiary (AS level) in my home country Nigeria. I was on the medical pathway and changed to Computer Science much later on, which is why I didn't complete my full A-level training. I studied Mathematics, Chemistry and Biology. <br><br />
+                </p>
+                <p>2014 - 2020 <br>
+                I went to an all-girls Catholic secondary school in Nigeria. It is a rather competitive school with a very distinct uniform. That is all I will say. I studied subjects like Mathematics and Further Mathematics, Chemistry, Physics, Biology, Economics and English Langauge. <br><br />
+                </p>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section class="page-section-portfolio">
+            <h1 id="portfolio">Portfolio</h1>
+            <div class="description" style="color: #eba190;">
+                <p>I have worked on a few projects so far, mostly during my internship. </p><br><br>
+                <ol>
+                    <li><a class="folio" href="https://github.com/onyinyem/3D-clickable-flip-cards">3D clickable flip cards</a></li>
+                    <p>This is a HTML and CSS (scss) project for advertising a fictitious company, Juice4Days with clickable flip cards.</p><br>
+                    <li><a href="https://github.com/onyinyem/Parallax-Scrolling-with-JS" class="folio">Parallax Scrolling using JavaScript</a></li>
+                    <p>This is a web page designed using HTML, CSS and JavaScript to create a parallax scrolling effect. This is where the objects on the webpage seem to move as the webpage is explored. It is a very cool and relatively simple way to make an interesting website.</p><br>
+                    <li><a href="#hero" class="folio">Responsive Web Design Webpage</a></li>
+                    <p>This is the very project you're looking at! :)<br><br />
+                    I used HTML, CSS and JavaScript as well for this webpage. It is a webpage whose content changes to fit the screen it's on.</p>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Favourite activities -->
+        <section class="page-section-activities">
+            <h1 id="activities">Hobbies/Activities</h1>
+            <div class="description" style="color: #eefff9;">
+                <ol>
+                    <li style="list-style: square;">In my free time, I like to make videos and take pictures, editing and all. I also like to watch movies to diversify my skills in filmmaking.</li><br>
+                    <li style="list-style: square;">I read sometimes, but not as much as I'd like.</li><br>
+                    <li style="list-style: square;">I have taken on the habit of taking walks in any spare time that I get nowadays too.</li><br>
+                    <li style="list-style: square;">I'm an amateur skateboarder, but I like to practice sometimes (even though I hardly have the time).</li><br>
+                    <li style="list-style: square;">Most of all, I enjoy spending time in the presence of my Heavenly Father, reading my bible, talking to people about the Gospel and talking with God! <3</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- core JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
